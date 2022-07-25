@@ -45,7 +45,9 @@ app.post('/enviar', exposeHeaders, async (req, res) => {
         type: "template",
         template: {
             name: "juga_duolingo",
-            language: "en_US"
+            language: {
+                code: "en_US"
+            }
         }
     }
 
@@ -55,7 +57,7 @@ app.post('/enviar', exposeHeaders, async (req, res) => {
 
     // client.messages 
     //   .create({ 
-    //      from: 'whatsapp:+14155238886',       
+    //      from: 'whatsapp:+${ID_CLIENT}',       
     //      body: MESSAGE_TO_SEND, 
     //      to: `whatsapp:${PHONE_TO_SEND}` 
     //    }) 
